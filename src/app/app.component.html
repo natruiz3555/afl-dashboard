@@ -1,11 +1,13 @@
 <div id="ParentDiv">
-    <h2>Select Team</h2>
-    <ul>
-        <li *ngFor="let team of teams" (click)="onSelect(team)">
-            <img src="https://squiggle.com.au{{team.logo}}" alt="{{team.name}} logo" height="50">
-            {{team.name}}
-        </li>
-    </ul>
+  <h2>Select Team</h2>
+  <ul>
+    <li *ngFor="let team of teams" (click)="onSelect(team)">
+      <img src="https://squiggle.com.au{{team.logo}}" alt="{{team.name}} logo" height="50">
+        {{team.name}}
+    </li>
+  </ul>
 
-   <div *ngIf="selectedTeam"> <app-past-games [team]="selectedTeam"></app-past-games> </div>
+  <div *ngIf="selectedTeam">
+    <app-past-games [team]="selectedTeam"></app-past-games>
+  </div>
 </div>

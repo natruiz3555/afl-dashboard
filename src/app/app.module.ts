@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameServiceService } from './game-service.service';
 import { PastGamesComponent } from './past-games/past-games.component';
+import { NextGamePredictionComponent } from './next-game-prediction/next-game-prediction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PastGamesComponent
+    PastGamesComponent,
+    NextGamePredictionComponent
   ],
   imports: [
     BrowserModule,
