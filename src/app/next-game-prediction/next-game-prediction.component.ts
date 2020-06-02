@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
 
-import { TipService } from '../tip.service'
+import { TipService } from '../tip.service';
 import { Team } from '../team';
 import { Tip } from '../tip';
 
@@ -18,7 +18,7 @@ export class NextGamePredictionComponent implements OnInit, OnChanges {
   constructor(private tipService: TipService) { }
 
   getTeam(teamId: number): Team {
-    return this.teams.find(team => (team.id == teamId));
+    return this.teams.find(team => (team.id === teamId));
   }
 
   getTeamUrl(teamId: number) {
@@ -26,7 +26,7 @@ export class NextGamePredictionComponent implements OnInit, OnChanges {
   }
 
   getTeamChance() {
-    if (this.team.id == this.latestTip.ateamid) {
+    if (this.team.id === this.latestTip.ateamid) {
       return this.latestTip.confidence;
     } else {
       return this.latestTip.hconfidence;
@@ -48,11 +48,11 @@ export class NextGamePredictionComponent implements OnInit, OnChanges {
       // Filter to after round 19.
       tips = tips.filter(tip => tip.round >= 20);
       // Filter to tips that match this team.
-      tips = tips.filter(tip => (tip.ateamid == this.team.id || tip.hteamid == this.team.id));
+      tips = tips.filter(tip => (tip.ateamid === this.team.id || tip.hteamid === this.team.id));
       // Get the first tip in that list.
       this.latestTip = tips[0];
       // Update the other team based on the tip.
-      if (this.team.id != this.latestTip.ateamid) {
+      if (this.team.id !== this.latestTip.ateamid) {
         this.otherTeam = this.getTeam(this.latestTip.ateamid);
       } else {
         this.otherTeam = this.getTeam(this.latestTip.hteamid);

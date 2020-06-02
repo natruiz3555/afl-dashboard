@@ -1,24 +1,24 @@
 export class Tip {
     constructor(
-        public complete: string,
+        public ateam: string,
         public ateamid: number,
-        public tip: string,
-        public gameid: number,
-        public correct: number,
-        public confidence: string,
-        public venue: string,
-        public tipteamid: number,
-        public hteamid: number,
-        public sourceid: number,
-        public hteam: string,
-        public year: number,
         public bits: string,
+        public confidence: string,
+        public correct: number,
         public date: string,
         public err: string,
-        public ateam: string,
-        public updated: string,
+        public gameid: number,
         public hconfidence: string,
+        public hteam: string,
+        public hteamid: number,
+        public margin: string,
+        public round: number,
         public source: string,
-        public round: number
+        public sourceid: number,
+        public tip: string,
+        public tipteamid: number,
+        public updated: string,
+        public venue: string,
+        public year: number
     ) {}
 }
