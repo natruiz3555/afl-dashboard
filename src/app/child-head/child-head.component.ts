@@ -40,7 +40,7 @@ export class ChildHeadComponent implements OnInit {
       var tempArr = [];
       temp.forEach(element => {
         if((element.hteamid == this.teamA.id && element.ateamid == this.teamB.id)
-        || (element.hteamid == this.teamB.id && element.ateamid == this.teamA.id))
+        || (element.hteamid == this.teamB.id && element.ateamid == this.teamA.id) && element.round <= 20)
         { tempArr.push(element); }
       });
       this.games = tempArr;
