@@ -14,9 +14,9 @@ export class PastGamesComponent implements OnInit {
 
   constructor(private dataService: GameServiceService) { }
 
-  ngOnChanges(changes: SimpleChanges)
+  OnChanges(changes: SimpleChanges)
   {
-    if (changes['team']) {
+    if (changes.team) {
       this.getTeamGames();
     }
   }
@@ -27,9 +27,9 @@ export class PastGamesComponent implements OnInit {
 
   getTeamGames(): void {
     this.dataService.getGames().subscribe(temp => {
-      var tempArr = [];
+      const tempArr = [];
       temp.forEach(element => {
-        if((element.hteamid == this.team.id || element.ateamid == this.team.id) && element.round <= 20) { 
+        if ((element.hteamid === this.team.id || element.ateamid === this.team.id) && element.round <= 20) {
            tempArr.push(element);
          }
        });

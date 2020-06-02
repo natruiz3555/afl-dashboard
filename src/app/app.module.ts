@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,10 +14,10 @@ import { PastGamesComponent } from './past-games/past-games.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     HttpClientModule
   ],
-  providers: [GameServiceService],
+  providers: [GameServiceService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

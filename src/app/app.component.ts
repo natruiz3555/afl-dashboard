@@ -12,9 +12,9 @@ export class AppComponent {
   selectedTeam: Team;
   teams: Team[];
 
-  constructor(private dataService:GameServiceService) { }
+  constructor(private dataService: GameServiceService) { }
 
-  ngOnInit(): void {
+  OnInit(): void {
     this.getTeams();
   }
 
@@ -23,6 +23,6 @@ export class AppComponent {
   }
 
   getTeams(): void{
-    this.dataService.getTeams().subscribe(temp => {this.teams = temp}); //from onenote
+    this.dataService.getTeams().subscribe(temp => {this.teams = temp; });
   }
 }
