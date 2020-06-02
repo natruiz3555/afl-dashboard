@@ -1,0 +1,30 @@
+<div id = "ChildDiv">
+    <div *ngIf="team">
+      <h3>Top Venues for {{team.name}}</h3>
+        <table style="text-align: center;">
+          <tr>
+              <th>Venue</th><!--<th>Counter</th>-->
+          </tr>
+          <tr *ngFor="let game of games">
+              <td>{{game.venue}}</td>
+              <!--<td>[to be implemented]</td>-->
+          </tr>
+      </table>
+    </div>
+  </div>
+  
+  <!--<div id = "ChildDiv">
+    <div *ngIf="team">
+      <h3>Top Venues for {{team.name}}</h3>
+        <table style="text-align: center;">
+          <tr>
+              <th>Venue</th><th>Counter</th>
+          </tr>
+          <tr *ngFor="let venue of venues">
+              <td>{{venue.name}}</td>
+              <td>{{venue.counter}}</td>
+          </tr>
+      </table>
+    </div>
+  </div>-->
+  
