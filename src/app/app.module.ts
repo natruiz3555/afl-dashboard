@@ -4,22 +4,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PastGamesService } from './past-games.service';
-import { ParentgamesComponent } from './parentgames/parentgames.component';
-import { ChildgamesComponent } from './childgames/childgames.component';
+import { GameServiceService } from './game-service.service';
+import { PastGamesComponent } from './past-games/past-games.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParentgamesComponent,
-    ChildgamesComponent
+    PastGamesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule
   ],
-  providers: [PastGamesService],
+  providers: [GameServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
