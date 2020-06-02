@@ -34,7 +34,7 @@ export class ChildgamesComponent implements OnInit {
     this.pastGamesService.getGames().subscribe(temp => {
       var tempArr = [];
       temp.forEach(element => {
-        if(element.hteamid == this.team.id || element.ateamid == this.team.id) { tempArr.push(element);
+        if((element.hteamid == this.team.id || element.ateamid == this.team.id) && element.round <= 20) { tempArr.push(element);
       }
     });
       this.games = tempArr;
