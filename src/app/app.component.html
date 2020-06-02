@@ -1,4 +1,4 @@
-<div id="ParentDiv">
+<div class="container">
   <h2>Select Team</h2>
   <ul>
     <li *ngFor="let team of teams" (click)="onSelect(team)">
@@ -8,6 +8,13 @@
   </ul>
 
   <div *ngIf="selectedTeam">
-    <app-past-games [team]="selectedTeam"></app-past-games>
+    <div class="row">
+      <div class="col-md-6">
+        <app-past-games [team]="selectedTeam"></app-past-games>
+      </div>
+      <div class="col-md-6">
+        <app-next-game-prediction [team]="selectedTeam" [teams]="teams"></app-next-game-prediction>
+      </div>
+    </div>
   </div>
 </div>
