@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ParentHeadComponent } from './parent-head/parent-head.component';
+//import { Parentnext5Component } from './parentnext5/parentnext5.component';
+
 
 const routes: Routes = [
-  { path: 'parenthead', component: ParentHeadComponent }
+  //{ path: 'parentnext5', component: Parentnext5Component }
 ];
 
 @NgModule({

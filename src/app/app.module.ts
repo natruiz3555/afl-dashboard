@@ -4,22 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ParentHeadComponent } from './parent-head/parent-head.component';
-import { ChildHeadComponent } from './child-head/child-head.component';
-import { HeadServiceService } from './head-service.service';
+import { Parentnext5Component } from './parentnext5/parentnext5.component';
+import { Childnext5Component } from './childnext5/childnext5.component';
+import { Next5Service } from './next5.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParentHeadComponent,
-    ChildHeadComponent
+    Parentnext5Component,
+    Childnext5Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HeadServiceService],
+  providers: [Next5Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

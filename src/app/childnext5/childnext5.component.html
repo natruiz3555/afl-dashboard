@@ -1,0 +1,17 @@
+<div id = "ChildDiv">
+    <div *ngIf="team">
+      <h3>{{team.name}}'s next 5 matches</h3>
+        <table style="text-align: center;">
+          <tr>
+              <th>Home Team</th><th>Away Team</th><th>Venue</th><th>Date</th>
+          </tr>
+          <tr *ngFor="let game of games">
+              <td>{{game.hteam}}</td>
+              <td>{{game.ateam}}</td>
+              <td>{{game.venue}}</td>
+              <td>{{game.date}}</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+  
