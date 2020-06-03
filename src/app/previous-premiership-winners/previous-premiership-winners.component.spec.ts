@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PreviousPremiershipWinnersComponent } from './previous-premiership-winners.component';
 
@@ -8,7 +9,8 @@ describe('PreviousPremiershipWinnersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PreviousPremiershipWinnersComponent ]
+      declarations: [ PreviousPremiershipWinnersComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   }));

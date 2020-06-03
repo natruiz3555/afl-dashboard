@@ -10,9 +10,7 @@ describe('PastGamesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PastGamesComponent ],
-      imports: [
-        HttpClientTestingModule
-      ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   }));
