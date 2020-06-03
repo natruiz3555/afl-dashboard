@@ -17,7 +17,8 @@ export class PreviousPremiershipWinnersComponent implements OnInit {
   constructor(private ladderService: LadderService) { }
 
   ngOnInit(): void {
-    const startYear = new Date().getFullYear() - 5;
+    // Fake "now" time so we can pretend to still be in 2019
+    const startYear = new Date(2019, 5, 3).getFullYear() - 5;
     for (let i = 0; i < 5; ++i) {
       const year = startYear + i;
       this.ladderService.getLadder(year).subscribe(ladder => {
