@@ -9,11 +9,14 @@
 
   <div *ngIf="selectedTeam">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-2">
         <app-past-games [team]="selectedTeam"></app-past-games>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 mb-2">
         <app-next-game-prediction [team]="selectedTeam" [teams]="teams"></app-next-game-prediction>
+      </div>
+      <div class="col-md-6 mb-2">
+        <app-previous-premiership-winners [teams]="teams"></app-previous-premiership-winners>
       </div>
     </div>
   </div>
