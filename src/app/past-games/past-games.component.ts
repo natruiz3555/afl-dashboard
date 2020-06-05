@@ -33,6 +33,6 @@ export class PastGamesComponent implements OnInit, OnChanges {
   }
 
   isLoaded(): boolean {
-    return this.games.length >= 1;
+    return this.games && this.games.length >= 1;
   }
 }
