@@ -1,16 +1,29 @@
-<div id="ChildDiv">
-    <div *ngIf="team">
-        <h3>Games that {{team.name}} has played this season:</h3>
-        <table style="text-align: center;">
-            <tr>
-                <th>Home Team</th><th>Away Team</th><th>Score</th><th>Winner</th>
-            </tr>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Games that {{team.name}} has played this season:</h5>
+    <div *ngIf="isLoaded(); then loaded else loading"></div>
+    <ng-template #loaded>
+      <table class="table">
+        <thead>
+          <tr>
+              <th>Home Team</th>
+              <th>Away Team</th>
+              <th>Score</th>
+              <th>Winner</th>
+          </tr>
+        </thead>
+          <tbody>
             <tr *ngFor="let game of games">
-                <td>{{game.hteam}}</td>
-                <td>{{game.ateam}}</td>
-                <td>{{game.hscore}}--{{game.ascore}}</td>
-                <td>{{game.winner}}</td>
+              <td>{{game.hteam}}</td>
+              <td>{{game.ateam}}</td>
+              <td>{{game.hscore}}--{{game.ascore}}</td>
+              <td>{{game.winner}}</td>
             </tr>
-        </table>
-    </div>
+          </tbody>
+      </table>
+    </ng-template>
+    <ng-template #loading>
+      <h6 class="card-subtitle mb-2 text-muted">Loading...</h6>
+    </ng-template>
+  </div>
 </div>

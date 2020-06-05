@@ -31,4 +31,8 @@ export class PastGamesComponent implements OnInit, OnChanges {
       this.games = temp.filter(element => (element.hteamid === this.team.id || element.ateamid === this.team.id));
     });
   }
+
+  isLoaded(): boolean {
+    return this.games.length >= 1;
+  }
 }
