@@ -1,0 +1,9 @@
+img {
+    max-width: 100%;
+}
+.vs, .team-logo {
+    margin: auto;
+}
+.card {
+    text-align: center;
+}

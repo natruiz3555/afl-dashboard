@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Next game prediction</h5>
+    <div *ngIf="latestTip; then tipLoaded else loading"></div>
+    <ng-template #tipLoaded>
+      <h6 class="card-subtitle mb-2 text-muted">
+        <div class="row">
+          <div class="col col-5 team-logo">
+            <img src={{getTeamUrl(team.id)}} />
+            <div>{{team.name}}</div>
+          </div>
+          <div class="col vs">vs</div>
+          <div class="col col-5 team-logo">
+            <img src={{getTeamUrl(otherTeam.id)}} />
+            <div>{{otherTeam.name}}</div>
+          </div>
+        </div>
+      </h6>
+      <div class="card-text h3">Chance that {{team.name}} will win: {{getTeamChance()}}%</div>
+    </ng-template>
+    <ng-template #loading>
+      <h6 class="card-subtitle mb-2 text-muted">Loading...</h6>
+    </ng-template>
+  </div>
+</div>
