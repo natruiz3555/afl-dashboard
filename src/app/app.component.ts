@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
     this.getTeams();
   }
 
-  onSelect(team: Team): void{
-    this.selectedTeam = team;
+  onSelect(event): void {
+    this.selectedTeam = this.teams[event.target.selectedIndex - 1];
   }
 
   getTeams(): void{
