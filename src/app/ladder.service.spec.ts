@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { TipService } from './tip.service';
+import { LadderService } from './ladder.service';
 
-describe('TipService', () => {
-  let service: TipService;
+describe('LadderService', () => {
+  let service: LadderService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [ HttpClientTestingModule ]
     });
-    service = TestBed.inject(TipService);
+    service = TestBed.inject(LadderService);
   });
 
   it('should be created', () => {

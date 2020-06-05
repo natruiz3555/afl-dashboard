@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { NextGamePredictionComponent } from './next-game-prediction.component';
+import { PreviousPremiershipWinnersComponent } from './previous-premiership-winners.component';
 
-describe('NextGamePredictionComponent', () => {
-  let component: NextGamePredictionComponent;
-  let fixture: ComponentFixture<NextGamePredictionComponent>;
+describe('PreviousPremiershipWinnersComponent', () => {
+  let component: PreviousPremiershipWinnersComponent;
+  let fixture: ComponentFixture<PreviousPremiershipWinnersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NextGamePredictionComponent ],
+      declarations: [ PreviousPremiershipWinnersComponent ],
       imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NextGamePredictionComponent);
+    fixture = TestBed.createComponent(PreviousPremiershipWinnersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
