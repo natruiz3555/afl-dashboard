@@ -1,6 +1,8 @@
+<nav class="navbar navbar-dark bg-dark mb-5 center">
+  <div class="navbar-brand mb-0 h1 full-width">AFL Dashboard</div>
+</nav>
 <div class="container">
-  <h2>Select Team</h2>
-  <ul>
+  <ul class="center">
     <select name="teams" id="teams" (change)="onSelect($event)">
       <option selected disabled>Select a team: </option>
       <option *ngFor="let team of teams">{{team.name}}</option>
