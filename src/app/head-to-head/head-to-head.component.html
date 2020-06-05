@@ -1,0 +1,43 @@
+<p>head-to-head works!</p>
+
+<div class="container">
+  <h2>Select Rival Team</h2>
+  <ul>
+    <li *ngFor="let team of teams" (click)="onSelectB(team)">
+      <img src="https://squiggle.com.au{{team.logo}}" alt="{{team.name}} logo" height="50">
+        {{team.name}}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="team && selectedTeamB">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{team.name}} VS {{selectedTeamB.name}}</h5>
+      <div *ngIf="isLoaded(); then loaded else loading"></div>
+        <ng-template #loaded>
+          <table class="table">
+            <thead>
+              <tr>
+                  <th>Home Team</th>
+                  <th>Away Team</th>
+                  <th>Score</th>
+                  <th>Winner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let game of games">
+                  <td>{{game.hteam}}</td>
+                  <td>{{game.ateam}}</td>
+                  <td>{{game.hscore}}--{{game.ascore}}</td>
+                  <td>{{game.winner}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </ng-template>
+        <ng-template #loading>
+          <h6 class="card-subtitle mb-2 text-muted">Loading... Please select two different teams</h6>
+        </ng-template>
+    </div>
+  </div>
+</div>
