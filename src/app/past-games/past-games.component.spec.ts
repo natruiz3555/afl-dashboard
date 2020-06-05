@@ -19,7 +19,7 @@ describe('PastGamesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PastGamesComponent);
     component = fixture.componentInstance;
-    component.team = new Team("logo.png", 1, "Team", "TEAM");
+    component.team = new Team('logo.png', 1, 'Team', 'TEAM');
     fixture.detectChanges();
   });
 
