@@ -7,5 +7,5 @@
         </li>
     </ul>
 
-   <app-past-games [team]="selectedTeam"></app-past-games>
+   <div *ngIf="selectedTeam"> <app-past-games [team]="selectedTeam"></app-past-games> </div>
 </div>

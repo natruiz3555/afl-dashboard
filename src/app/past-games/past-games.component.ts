@@ -8,13 +8,13 @@ import { GameServiceService } from '../game-service.service';
   templateUrl: './past-games.component.html',
   styleUrls: ['./past-games.component.css']
 })
-export class PastGamesComponent implements OnInit {
+export class PastGamesComponent implements OnInit, OnChanges {
   @Input() team: Team;
   games: Game[];
 
   constructor(private dataService: GameServiceService) { }
 
-  OnChanges(changes: SimpleChanges)
+  ngOnChanges(changes: SimpleChanges)
   {
     if (changes.team) {
       this.getTeamGames();
@@ -27,13 +27,8 @@ export class PastGamesComponent implements OnInit {
 
   getTeamGames(): void {
     this.dataService.getGames().subscribe(temp => {
-      const tempArr = [];
-      temp.forEach(element => {
-        if ((element.hteamid === this.team.id || element.ateamid === this.team.id) && element.round <= 20) {
-           tempArr.push(element);
-         }
-       });
-      this.games = tempArr;
+      temp = temp.filter(element => element.round >= 20);
+      this.games = temp.filter(element => (element.hteamid === this.team.id || element.ateamid === this.team.id));
     });
   }
 }

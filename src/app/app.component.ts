@@ -7,14 +7,14 @@ import {GameServiceService} from './game-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'afl-dashboard';
   selectedTeam: Team;
   teams: Team[];
 
   constructor(private dataService: GameServiceService) { }
 
-  OnInit(): void {
+  ngOnInit(): void {
     this.getTeams();
   }
 
